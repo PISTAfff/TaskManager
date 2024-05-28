@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pista's To Do List</title>
+</head>
+
+<body>
+    <div class="Main Container">
+        <div class="Top Container">
+
+            <div class="Search-Bar-Container Container Top-Container">
+                <img src="assests/search.svg" alt="Search" class="Search-Bar-Icon Icon">
+                <input type="text" maxlength="19" name="Search-Text" id="Search-Text" class="Search-Bar"
+                    placeholder="Search..">
+                <button class="Search-Bar-X-Button" onclick="Clear_Content('Search-Text')">
+                    <img src="assests/x.svg" alt="Delete" class="Search-Bar-X-Icon Icon">
+                </button>
+            </div>
+            <div class="Add-Task-Button-Container Container Top-Container">
+                <button class="Add-Task-Button" onclick="Show_Add_Task_Container()">
+                    <img src="assests/plus.svg" alt="Plus" class="Add-Task-Icon Icon">
+                </button>
+                <div class="Add-Task-Background">
+                    <p class="Add-Task-Text">Add Task</p>
+                </div>
+            </div>
+            <div class="Name-Container Container">
+                <p class="Name-Text">Pista's To Do List</p>
+            </div>
+            <div class="Theme-Container Container Top-Container">
+                <div class="Theme-Background Container">
+                    <div class="Theme-Insideground Container">
+                        <img src="assests/moon.svg" alt="Moon" class="Moon-Icon Icon">
+                        <button class="Theme-Change-Button" id="Theme-Change-Button" onclick="Change_Theme()"></button>
+                        <img src="assests/sun-one.svg" alt="Sun" class="Sun-Icon Icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Bot">
+            <div class="Signs">
+                <img src="assests/x.svg" alt="x" class=" Icon">
+            </div>
+            <div class="Signs">
+                <img src="assests/plus.svg" alt="+" class="Icon">
+            </div>
+            <div class="Signs">
+                <img src="assests/minus.svg" alt="-" class="Icon">
+            </div>
+            <div class="Task-Container" id="Important-Task-Conatiner"></div>
+            <div class="Task-Container" id="Normal-Task-Conatiner"></div>
+            <div class="Task-Container" id="Not-Important-Task-Conatiner"></div>
+        </div>
+    </div>
+    <div class="Task-Window-Container-Background" id="Add-Task-Window">
+        <div class="Task-Window-Container">
+            <div class="Task-Window-Top-Container">
+                <div class="Task-Piority-Chooser-Container Container">
+                    <div class="Task-Piority-Options Container">
+                        <img src="assests/x.svg" alt="X" class="Very-Important-Icon Icon">
+                        <img src="assests/plus.svg" alt="+" class="Important-Icon Icon">
+                        <img src="assests/minus.svg" alt="-" class="Normal-Icon Icon">
+                        <button class="Choose-Piority-Button" id="Choose-Piority-Button"
+                            onclick="Change_Piority()"></button>
+                    </div>
+                </div>
+                <div class="Task-Content-Container Container">
+                    <input type="text" maxlength="19" name="Task" id="Task-Content" class="Task-Content-Input"
+                        placeholder="Write Task Here.">
+                    <button class="Task-Content-Input-Button" onclick="Clear_Content('Task-Content')">
+                        <img src="assests/x.svg" alt="Delete" class="Task-Content-Input-X-Icon Icon">
+                    </button>
+                </div>
+            </div>
+            <div class="Task-Window-Bot-Container Container">
+                <button class="Add-Button Btn" onclick="Add_Task()">
+                    Add Task
+                </button>
+                <button class="Pin-Button Btn" onclick="Add_Task_Pin()">
+                    <img src="assests/pin.svg" alt="pin" class="Pin-Icon Icon" id="Pin-Task-Button">
+                </button>
+                <button class="Cancel-Button Btn" onclick="Return_Task_To_Default()">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>

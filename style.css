@@ -1,0 +1,386 @@
+:root {
+  --Current1-Color: #212529db;
+  --Current2-Color: #343a40af;
+  --Current3-Color: #495057db;
+  --Current4-Color: #6c757dc9;
+  --Current5-Color: #343a40db;
+  --Title-Color: #f8f9fa;
+  --Hover-Color: #adb5bdc4;
+
+  /* --Current1-Color: #a2a2a2;
+  --Current2-Color: #bdbdbde1;
+  --Current3-Color: #dfdfdfe7;
+  --Current4-Color: #efefef;
+  --Current5-Color: #cacacad7;
+  --Title-Color: #f8f9fa;
+  --Hover-Color: #bfbfbfe7; */
+}
+* {
+  font-family: monospace;
+  border: none;
+  transition: 0.25s;
+  outline: none;
+  text-align: center;
+  color: #212529;
+}
+*::placeholder {
+  color: #212529;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  zoom: 0.8;
+  background-image: url("assests/Background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.Icon {
+  width: 25px;
+  z-index: 1;
+  pointer-events: none;
+}
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Main {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 87.5vh;
+  scale: 1.25;
+}
+.Top {
+  position: relative;
+  top: 0%;
+  padding: 15% 0 5% 0;
+}
+.Top-Container {
+  padding: 0 75px 0 75px;
+}
+.Add-Task-Button-Container {
+  width: 150px;
+  height: 50px;
+  position: relative;
+  left: -75px;
+}
+.Add-Task-Background {
+  background-color: var(--Current4-Color);
+  position: relative;
+  left: 15px;
+  width: 150px;
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Add-Task-Button {
+  background-color: transparent;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  min-width: 25px;
+  min-height: 25px;
+  max-width: 25px;
+  max-height: 25px;
+  position: relative;
+  left: 50px;
+}
+.Add-Task-Icon {
+  width: 25px;
+  height: 25px;
+}
+.Add-Task-Text {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  position: relative;
+  padding: 20px 20px 0 0;
+}
+.Add-Task-Button:hover,
+.Add-Task-Button:active {
+  scale: 1.25;
+}
+.Search-Bar-Container {
+  width: 400px;
+  height: 50px;
+  position: relative;
+  left: 100px;
+}
+.Search-Bar {
+  background-color: var(--Current4-Color);
+  position: relative;
+  left: 15px;
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.Search-Bar-X-Button {
+  background-color: transparent;
+  z-index: 1;
+  justify-items: center;
+  align-items: center;
+  border-radius: 10px;
+  min-width: 25px;
+  min-height: 25px;
+  max-width: 25px;
+  max-height: 25px;
+  position: relative;
+  right: 25px;
+  top: -0.75px;
+}
+.Search-Bar-X-Button:active,
+.Search-Bar-X-Button:hover {
+  scale: 1.25;
+}
+.Search-Bar-Icon {
+  position: relative;
+  left: 50px;
+}
+
+.Search-Bar:hover,
+.Search-Bar:focus {
+  background-color: var(--Hover-Color);
+}
+.Name-Container {
+  width: 200px;
+  height: 50px;
+  position: relative;
+  right: 77.5px;
+}
+.Name-Text {
+  color: var(--Title-Color);
+  font-size: 20px;
+}
+.Theme-Container {
+  width: 150px;
+  height: 50px;
+  position: relative;
+  left: -120px;
+}
+.Theme-Background {
+  width: 75%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--Current4-Color);
+}
+.Theme-Insideground {
+  border-radius: 10px;
+  background-color: var(--Current3-Color);
+  width: 85%;
+  height: 75%;
+}
+.Theme-Change-Button {
+  background-color: var(--Current2-Color);
+  width: 27.5px;
+  height: 27.5px;
+  border-radius: 10px;
+  position: relative;
+}
+.Moon-Icon {
+  width: 20px;
+  position: relative;
+  left: -7.5px;
+}
+.Sun-Icon {
+  width: 20px;
+  position: relative;
+  right: -7.5px;
+}
+
+.Theme-Change-Button:active,
+.Theme-Change-Button:hover {
+  background-color: var(--Current1-Color);
+}
+.Bot {
+  padding: 0% 0 17.5% 0;
+  max-height: fit-content;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 10px;
+  grid-template-rows: 0;
+  justify-items: center;
+  align-items: center;
+}
+.Task-Container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  bottom: -80px;
+  background-color: var(--Current3-Color);
+  border-radius: 0 0 10px 10px;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-auto-rows: 53.75px;
+}
+.Signs {
+  position: relative;
+  bottom: -74.75px;
+  font-size: 24px;
+  width: 100%;
+  background-color: var(--Current5-Color);
+  border-radius: 10px 10px 0 0;
+}
+.Task-Window-Container-Background {
+  background-color: #00000098;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transform: translate(50% 50%);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  scale: 0;
+  transition: 0s;
+}
+.Task-Window-Container {
+  scale: 1.5;
+  width: 300px;
+  height: 200px;
+  max-width: 300px;
+  max-height: 200px;
+  background-color: var(--Current2-Color);
+  border-radius: 10px;
+  display: grid;
+}
+.Task-Window-Top-Container {
+  display: grid;
+  max-width: 300px;
+  height: 125%;
+  justify-items: center;
+  align-items: center;
+}
+.Task-Content-Input-Button {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  right: 30px;
+}
+.Task-Content-Input {
+  border-radius: 10px;
+  height: 35px;
+  width: 200px;
+  text-align: left;
+  padding: 0 30px 0 30px;
+  margin-left: 20px;
+  background-color: var(--Current4-Color);
+}
+.Task-Content-Input:hover,
+.Task-Content-Input:focus {
+  background-color: var(--Hover-Color);
+}
+.Task-Content-Input-Button:active,
+.Task-Content-Input-Button:hover {
+  scale: 1.1;
+}
+.Task-Piority-Chooser-Container {
+  background-color: var(--Current4-Color);
+  width: 55%;
+  height: 35px;
+  border-radius: 5px;
+}
+.Task-Piority-Options {
+  background-color: var(--Current3-Color);
+  position: relative;
+  border-radius: 5px;
+  height: 25px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 55px 55px 55px;
+  justify-items: center;
+  align-items: center;
+}
+.Choose-Piority-Button {
+  background-color: var(--Current2-Color);
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 5px;
+  position: relative;
+  top: -25px;
+}
+.Choose-Piority-Button:hover {
+  background-color: var(--Current1-Color);
+}
+.Task-Window-Bot-Container {
+  max-width: 300px;
+  display: grid;
+  grid-template-columns: 50px 150px 50px;
+  justify-items: center;
+  align-items: center;
+}
+.Btn {
+  background-color: var(--Current4-Color);
+}
+.Add-Button {
+  width: 75px;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+}
+.Cancel-Button {
+  width: 75px;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+}
+.Pin-Button {
+  background-color: transparent;
+}
+.Btn:hover {
+  scale: 1.1;
+}
+.Task-Background {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin: 15px 0 15px 0;
+  scale: 1;
+}
+.Task-Bar-Container {
+  background-color: var(--Current4-Color);
+  border-radius: 10px;
+  width: 275px;
+}
+.Task-Bar-Container #Task-Checkbox {
+  width: 35px;
+}
+.Task-Icon {
+  width: 25px;
+}
+.Task-Btn {
+  background-color: transparent;
+}
+.Task-Btn:hover {
+  scale: 1.1;
+}
+.Task-Content {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 50%;
+  height: 15px;
+  max-height: 15px;
+  min-height: 0px;
+  padding-left: 5px;
+  text-align: left;
+}
